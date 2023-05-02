@@ -50,7 +50,8 @@
     ]
   },
   "dependencies": {
-    "@nuxt/kit": "^3.4.3"
+    "@nuxt/kit": "^3.4.3",
+    "uikit": "^3.16.15"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
@@ -60,6 +61,7 @@
     "@nuxt/schema": "^3.4.3",
     "@nuxt/test-utils": "^3.4.3",
     "@types/node": "^18",
+    "@types/uikit": "^3.14.0",
     "changelogen": "^0.5.3",
     "eslint": "^8.39.0",
     "husky": "^8.0.3",
