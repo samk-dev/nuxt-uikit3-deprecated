@@ -1,0 +1,71 @@
+{
+  "name": "nuxt-uikit3",
+  "version": "1.0.0-dev",
+  "description": "Nuxt - Uikit 3 module",
+  "repository": "samk-dev/nuxt-uikit3",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "PORT=6666 nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{ts,tsx,vue,md,json}\"",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{.js,ts,vue,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "test/**/*.{.js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "playground/**/*.{.js,ts,vue,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.4.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/schema": "^3.4.3",
+    "@nuxt/test-utils": "^3.4.3",
+    "@types/node": "^18",
+    "changelogen": "^0.5.3",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "nuxt": "^3.4.3",
+    "prettier": "^2.8.8",
+    "vitest": "^0.30.1"
+  }
+}
