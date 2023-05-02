@@ -13,15 +13,19 @@ nuxt-uikit3 Nuxt module.
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
+- Injects Uikit 3
+- Import only Uikit 3 components you need
+- Enable/Disable Uikit 3 default icons
 
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+### Todo
+
+- Docs []
+- Examples []
+- Nuxt 2 support?? maybe!!
 
 ## Quick Setup
 
-1. Add `nuxt-uikit3` dependency to your project
+Add `nuxt-uikit3` dependency to your project
 
 ```bash
 # Using pnpm
