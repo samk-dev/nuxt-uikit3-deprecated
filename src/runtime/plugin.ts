@@ -1,5 +1,9 @@
 import { defineNuxtPlugin } from '#app';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+UIkit.use(Icons);
 
 export default defineNuxtPlugin((nuxtApp) => {
-  console.log('Plugin injected by my-module!');
+  nuxtApp.provide('uikit', UIkit);
 });
