@@ -19,34 +19,64 @@ nuxt-uikit3 Nuxt module.
 
 ### Todo
 
+- Import only specific components []
+- Enable/Disable Uikit 3 default icons []
+- Contribution guid []
+- Licence []
 - Docs []
 - Examples []
+- PR template []
 - Nuxt 2 support?? maybe!!
 
 ## Quick Setup
 
-Add `nuxt-uikit3` dependency to your project
+Add `@samk_dev/nuxt-uikit3` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D nuxt-uikit3
+pnpm add -D @samk_dev/nuxt-uikit3
 
 # Using yarn
-yarn add --dev nuxt-uikit3
+yarn add --dev @samk_dev/nuxt-uikit3
 
 # Using npm
-npm install --save-dev nuxt-uikit3
+npm install --save-dev @samk_dev/nuxt-uikit3
 ```
 
-2. Add `nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
+Add `@samk_dev/nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
-  modules: ['nuxt-uikit3']
+  modules: ['@samk_dev/nuxt-uikit3']
 });
 ```
 
 That's it! You can now use Nuxt Uikit 3 in your Nuxt app ✨
+
+## Usage Example
+
+```vue
+<script setup lang="ts">
+const { $uikit } = useNuxtApp();
+
+function showModal() {
+  $uikit.modal.confirm('UIkit confirm!').then(
+    function () {
+      console.log('Confirmed.');
+    },
+    function () {
+      console.log('Rejected.');
+    }
+  );
+}
+</script>
+
+<template>
+  <div>
+    <button @click="showModal">show alert</button>
+  </div>
+</template>
+```
 
 ## Development
 
