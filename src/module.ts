@@ -1,3 +1,4 @@
+import type { NuxtUIkitModuleOptions } from './types';
 import {
   defineNuxtModule,
   addPlugin,
@@ -5,24 +6,39 @@ import {
   createResolver
 } from '@nuxt/kit';
 
-export interface ModuleOptions {}
-
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule<NuxtUIkitModuleOptions>({
   meta: {
     name: 'nuxt-uikit3',
-    configKey: 'uikit3'
+    configKey: 'uikit3',
+    compatibility: {
+      nuxt: '^3.0.0',
+      bridge: false
+    }
   },
 
-  defaults: {},
+  defaults: {
+    css: {
+      coreCss: true,
+      coreTheme: true
+    }
+  },
 
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url);
 
-    nuxt.hooks.hook('prepare:types', ({ references }) => {
-      references.push({
-        path: resolver.resolve(nuxt.options.buildDir, 'nuxt-uikit3.d.ts')
-      });
-    });
+    const cssOptions = options.css;
+
+    if (cssOptions?.coreCss && cssOptions.coreTheme) {
+      nuxt.options.css.push(
+        resolver.resolve('../node_modules/uikit/dist/css/uikit.min.css')
+      );
+    }
+
+    if (options.css?.coreCss && !cssOptions?.coreTheme) {
+      nuxt.options.css.push(
+        resolver.resolve('../node_modules/uikit/dist/css/uikit-core.min.css')
+      );
+    }
 
     addTemplate({
       filename: 'nuxt-uikit3.d.ts',
@@ -37,6 +53,12 @@ export default defineNuxtModule<ModuleOptions>({
         }
         `;
       }
+    });
+
+    nuxt.hooks.hook('prepare:types', ({ references }) => {
+      references.push({
+        path: resolver.resolve(nuxt.options.buildDir, 'nuxt-uikit3.d.ts')
+      });
     });
 
     addPlugin({ src: resolver.resolve('./runtime/plugin'), mode: 'client' });
