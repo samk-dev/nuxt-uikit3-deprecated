@@ -2,6 +2,25 @@
 import { useNuxtApp } from '#imports';
 const { $uikit } = useNuxtApp();
 
+const accordionItems = [
+  {
+    label: 'Item 1',
+    isOpen: true,
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    label: 'Item 2',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    label: 'Item 3',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+];
+
 function showModal() {
   $uikit.modal.confirm('UIkit confirm!').then(
     function () {
@@ -16,38 +35,17 @@ function showModal() {
 </script>
 
 <template>
-  <div>
-    <button @click="showModal">show alert</button>
-    <ul data-uk-accordion>
-      <li class="uk-open">
-        <a class="uk-accordion-title" href="#">Item 1</a>
-        <div class="uk-accordion-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </li>
-      <li>
-        <a class="uk-accordion-title" href="#">Item 2</a>
-        <div class="uk-accordion-content">
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            reprehenderit.
-          </p>
-        </div>
-      </li>
-      <li>
-        <a class="uk-accordion-title" href="#">Item 3</a>
-        <div class="uk-accordion-content">
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat proident.
-          </p>
-        </div>
-      </li>
-    </ul>
+  <div class="uk-container uk-padding">
+    <h1 class="uk-heading-small uk-text-bold">
+      Nuxt UIkit 3 Module Playground
+    </h1>
+
+    <h2 class="uk-text-bold">Modal Component</h2>
+    <button class="uk-button uk-button-secondary" @click="showModal">
+      Show Modal
+    </button>
+
+    <h2 class="uk-text-bold">Accordion Component</h2>
+    <base-accordion :items="accordionItems" />
   </div>
 </template>
