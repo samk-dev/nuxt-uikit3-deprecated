@@ -1,8 +1,12 @@
 {
   "name": "@samk_dev/nuxt-uikit3",
-  "version": "0.0.0",
+  "version": "1.0.0-0",
   "description": "Nuxt - Uikit 3 module",
   "repository": "samk-dev/nuxt-uikit3",
+  "author": {
+    "name": "Sam K",
+    "url": "https://samk.dev"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
