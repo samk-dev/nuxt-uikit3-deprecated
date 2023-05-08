@@ -34,13 +34,13 @@ Add `@samk_dev/nuxt-uikit3` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @samk_dev/nuxt-uikit3
+pnpm add -D @samk_dev/nuxt-uikit3 uikit
 
 # Using yarn
-yarn add --dev @samk_dev/nuxt-uikit3
+yarn add --dev @samk_dev/nuxt-uikit3 uikit
 
 # Using npm
-npm install --save-dev @samk_dev/nuxt-uikit3
+npm install --save-dev @samk_dev/nuxt-uikit3 uikit
 ```
 
 Add `@samk_dev/nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
@@ -53,26 +53,82 @@ export default defineNuxtConfig({
 
 That's it! You can now use Nuxt Uikit 3 in your Nuxt app ✨
 
+**To work with javascript components from UIkit 3, you have to add `data-uk-<component-name>`
+Please refer to UIkit 3 documentation as they mentioned there**
+
+From [UIkit 3 Docs](https://getuikit.com/docs/javascript)
+
+`UIkit and reactive JavaScript frameworks. UIkit is listening for DOM manipulations and will automatically initialize, connect and disconnect components as they are inserted or removed from the DOM. That way it can easily be used with JavaScript frameworks like Vue.js and React. You can use UIkit components by adding uk-* or data-uk-* attributes to your HTML elements without writing a single line of JavaScript. This is UIkit's best practice of using its components and should always be considered first.`
+
+```html
+<!-- ❌ WILL NOT WORK -->
+<div uk-sticky="offset: 50;"></div>
+<!-- ✅ WILL WORK -->
+<div data-uk-sticky="offset: 50;"></div>
+```
+
 ## Usage Example
 
-```vue
-<script setup lang="ts">
-const { $uikit } = useNuxtApp();
+### Acordion Component
 
-function showModal() {
-  $uikit.modal.confirm('UIkit confirm!').then(
-    function () {
-      console.log('Confirmed.');
-    },
-    function () {
-      console.log('Rejected.');
-    }
-  );
-}
+```html
+<template>
+  <ul data-uk-accordion>
+    <li class="uk-open">
+      <a class="uk-accordion-title" href="#">Item 1</a>
+      <div class="uk-accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href="#">Item 2</a>
+      <div class="uk-accordion-content">
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          reprehenderit.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href="#">Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+  </ul>
+</template>
+```
+
+### Use components programatically
+
+```html
+<script setup lang="ts">
+  // import $uikit from useNuxtApp()
+  const { $uikit } = useNuxtApp();
+  // use any component $uikit.<component-name>
+  function showModal() {
+    $uikit.modal.confirm('UIkit confirm!').then(
+      function () {
+        console.log('Confirmed.');
+      },
+      function () {
+        console.log('Rejected.');
+      }
+    );
+  }
 </script>
 
 <template>
   <div>
+    <!-- call showModal method on click -->
     <button @click="showModal">show alert</button>
   </div>
 </template>
