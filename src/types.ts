@@ -13,7 +13,7 @@ export type NUIkitCssOptions = {
    *
    * @sinc 0.0.1
    */
-  coreCss?: boolean;
+  coreCss: boolean;
   /**
    * @description Enable/Disable Nuxt UIkit 3 module from loading UIkit 3 default theme css
    * @type coreTheme
@@ -21,7 +21,7 @@ export type NUIkitCssOptions = {
    *
    * @sinc 0.0.1
    */
-  coreTheme?: boolean;
+  coreTheme: boolean;
 };
 
 /**
@@ -31,5 +31,7 @@ export type NUIkitCssOptions = {
  * @sinc 0.0.1
  */
 export interface NuxtUIkitModuleOptions {
-  css?: NUIkitCssOptions;
+  css: NUIkitCssOptions;
+  js: boolean;
+  icons: boolean;
 }

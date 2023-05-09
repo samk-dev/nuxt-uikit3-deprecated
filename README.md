@@ -6,35 +6,30 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 
 Nuxt compatibility: `^3.0.0`
-UIkit 3 version `3.16.15`
+UIkit 3 version `3.16.16`
 
 nuxt-uikit3 Nuxt module.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-  <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-uikit3?file=playground%2Fapp.vue) -->
-  <!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
 - [UIkit 3 Docs](https://getuikit.com/docs/introduction)
 - [Nuxt Docs](https://nuxt.com/docs/getting-started/introduction)
+  <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-uikit3?file=playground%2Fapp.vue) -->
+  <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
 - Injects UIkit 3 into Nuxt ✅
-- Load UIkit 3 default css or disable it and load your own ✅
+- Enable/Disable UIkit 3 default icons ✅
 - Use all UIKit 3 JS components without writing any JS ✅
 
-### On version `1.0.0` release **todos**
+### On version `1.0.0` release **todos:**
 
-- Enable/Disable Uikit 3 default icons
-- Import only specific JS components []
-- Enable/Disable Uikit 3 default icons []
+- scss/less to customize UIkit 3 theme
 - Tests jest?? or vitest??
 - Docs []
 - Examples []
 - Contribution guid []
 - Licence []
-- PR template []
-- Nuxt 2 support?? maybe!!
 
 ## Quick Setup
 
@@ -42,19 +37,19 @@ Add `@samk_dev/nuxt-uikit3` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @samk_dev/nuxt-uikit3 uikit
+pnpm add -D @samk_dev/nuxt-uikit3
 # with typyscript support
-pnpm add -D @samk_dev/nuxt-uikit3 uikit @types/uikit
+pnpm add -D @samk_dev/nuxt-uikit3
 
 # Using yarn
-yarn add --dev @samk_dev/nuxt-uikit3 uikit
+yarn add --dev @samk_dev/nuxt-uikit3
 # with typescript
-yarn add --dev @samk_dev/nuxt-uikit3 uikit @types/uikit
+yarn add --dev @samk_dev/nuxt-uikit3
 
 # Using npm
-npm install --save-dev @samk_dev/nuxt-uikit3 uikit
+npm install --save-dev @samk_dev/nuxt-uikit3
 # with typescript
-npm install --save-dev @samk_dev/nuxt-uikit3 uikit @types/uikit
+npm install --save-dev @samk_dev/nuxt-uikit3
 ```
 
 Add `@samk_dev/nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
@@ -86,7 +81,15 @@ export default defineNuxtConfig({
        * @default true
        */
       coreTheme: boolean
-    }
+    },
+    /**
+     * @default true
+     */
+    icons: boolean,
+    /**
+     * @default true
+     */
+    js: boolean
   }
 });
 ```
@@ -104,6 +107,14 @@ You can use any css class from UIkit 3 as you would normally do.
     <button type="button" class="uk-button uk-button-primary">Click me!</button>
   </div>
 </section>
+```
+
+## Icons
+
+[UIkit 3 icon documentation](https://getuikit.com/docs/icon)
+
+```html
+<span data-uk-icon="heart"></span>
 ```
 
 ## Javascript
@@ -210,10 +221,6 @@ npm run dev:build
 
 # Run ESLint
 npm run lint
-
-# Run Vitest
-npm run test
-npm run test:watch
 
 # Release new version
 npm run release

@@ -1,9 +1,11 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  uikit3: {
+  uikit: {
     css: {
-      //coreCss: false,
-      //coreTheme: false
-    }
+      coreCss: true,
+      coreTheme: false
+    },
+    js: true
+    // icons: false
   }
 });
