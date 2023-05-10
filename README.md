@@ -39,17 +39,11 @@ Add `@samk_dev/nuxt-uikit3` dependency to your project
 ```bash
 # Using pnpm
 pnpm add -D @samk_dev/nuxt-uikit3
-# with typyscript support
-pnpm add -D @samk_dev/nuxt-uikit3
 
 # Using yarn
 yarn add --dev @samk_dev/nuxt-uikit3
-# with typescript
-yarn add --dev @samk_dev/nuxt-uikit3
 
 # Using npm
-npm install --save-dev @samk_dev/nuxt-uikit3
-# with typescript
 npm install --save-dev @samk_dev/nuxt-uikit3
 ```
 
