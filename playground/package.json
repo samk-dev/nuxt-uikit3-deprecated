@@ -1,4 +1,7 @@
 {
   "private": true,
-  "name": "nuxt-uikit3-playground"
+  "name": "nuxt-uikit3-playground",
+  "scripts": {
+    "dev:prepare": "nuxt prepare"
+  }
 }

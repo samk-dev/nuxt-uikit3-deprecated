@@ -17,7 +17,6 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
       coreTheme: true
     },
     js: true
-    // icons: true
   },
 
   async setup(options, nuxt) {

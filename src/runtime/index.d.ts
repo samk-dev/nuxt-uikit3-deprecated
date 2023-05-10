@@ -11,5 +11,3 @@ declare module 'vue' {
     $uikit: typeof UIkit;
   }
 }
-
-export {};
