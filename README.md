@@ -23,8 +23,6 @@ nuxt-uikit3 Nuxt module.
 - Injects UIkit 3 into Nuxt ✅
 - Use all UIKit 3 JS components without writing any JS ✅
 
-⚠️ the package is still work in progress and will be released soon ⚠️
-
 ### On version `1.0.0` release **todos:**
 
 - scss/less to customize UIkit 3 theme
@@ -114,7 +112,7 @@ You can use any css class from UIkit 3 as you would normally do.
 
 ## Javascript
 
-You can use UIkit 3 JS components by adding the `data-uk-<component-name>` || by calling `$uikit` inside `<script></script>` tag
+You can use UIkit 3 JS components by adding the `data-uk-<component-name>`
 
 **To work with javascript components from UIkit 3, you have to add `data-uk-<component-name>`
 Please refer to UIkit 3 documentation as they mentioned there**
@@ -169,33 +167,6 @@ Using the `data-uk-<component-name>` method:
       </div>
     </li>
   </ul>
-</template>
-```
-
-### Inside `<script></script>` tag
-
-```html
-<script setup lang="ts">
-  // import $uikit from useNuxtApp()
-  const { $uikit } = useNuxtApp();
-  // use any component $uikit.<component-name>
-  function showModal() {
-    $uikit.modal.confirm('UIkit confirm!').then(
-      function () {
-        console.log('Confirmed.');
-      },
-      function () {
-        console.log('Rejected.');
-      }
-    );
-  }
-</script>
-
-<template>
-  <div>
-    <!-- call showModal method on click -->
-    <button @click="showModal">show alert</button>
-  </div>
 </template>
 ```
 
