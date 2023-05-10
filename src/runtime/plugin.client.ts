@@ -1,13 +1,11 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#app';
-// @ts-ignore
-import UIkit from 'uikit/dist/js/uikit.min.js';
-// @ts-ignore
-import Icons from 'uikit/dist/js/uikit-icons.min.js';
+import { defineNuxtPlugin /* useRuntimeConfig */ } from '#app';
+import * as UIkit from 'uikit';
+// import * as icons from 'uikit/dist/js/uikit-icons';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-  const { uikit: uikitOptions } = useRuntimeConfig().app;
-
-  if (uikitOptions.icons) UIkit.use(Icons);
+  // const { uikit: uikitOptions } = useRuntimeConfig().app;
+  // // @ts-ignore
+  // if (uikitOptions.icons) UIkit.use(icons);
 
   nuxtApp.provide('uikit', UIkit);
 });

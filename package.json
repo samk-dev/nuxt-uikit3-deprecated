@@ -1,6 +1,6 @@
 {
   "name": "@samk_dev/nuxt-uikit3",
-  "version": "1.0.0-2",
+  "version": "1.0.0@dev-10",
   "description": "Nuxt Uikit 3 module",
   "workspaces": [
     "docs",
@@ -47,7 +47,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.4.3"
+    "@nuxt/kit": "^3.4.3",
+    "uikit": "^3.16.17"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
@@ -62,8 +63,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "nuxt": "^3.4.3",
-    "prettier": "^2.8.8",
-    "uikit": "^3.16.16"
+    "prettier": "^2.8.8"
   },
   "lint-staged": {
     "src/**/*.{.js,ts,vue,tsx}": [

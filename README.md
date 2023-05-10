@@ -1,5 +1,7 @@
 # Nuxt Uikit 3
 
+⚠️ the package is still work in progress and will be released soon ⚠️
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
@@ -19,8 +21,9 @@ nuxt-uikit3 Nuxt module.
 ## Features
 
 - Injects UIkit 3 into Nuxt ✅
-- Enable/Disable UIkit 3 default icons ✅
 - Use all UIKit 3 JS components without writing any JS ✅
+
+⚠️ the package is still work in progress and will be released soon ⚠️
 
 ### On version `1.0.0` release **todos:**
 
@@ -107,14 +110,6 @@ You can use any css class from UIkit 3 as you would normally do.
     <button type="button" class="uk-button uk-button-primary">Click me!</button>
   </div>
 </section>
-```
-
-## Icons
-
-[UIkit 3 icon documentation](https://getuikit.com/docs/icon)
-
-```html
-<span data-uk-icon="heart"></span>
 ```
 
 ## Javascript

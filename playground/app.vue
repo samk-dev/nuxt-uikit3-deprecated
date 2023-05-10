@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNuxtApp } from '#imports';
+import { useNuxtApp /*onMounted*/ } from '#imports';
 const { $uikit } = useNuxtApp();
 
 const accordionItems = [
@@ -31,7 +31,12 @@ function showModal() {
     }
   );
 }
-// onMounted(() => console.log($uikit));
+// onMounted(() => {
+//   console.log(useNuxtApp());
+//   if (process.client) {
+//     console.log(UIkit.modal.confirm('Uiki'));
+//   }
+// });
 </script>
 
 <template>
@@ -61,7 +66,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider1.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>1</h1>
@@ -72,7 +77,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider2.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>2</h1>
@@ -83,7 +88,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider4.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>3</h1>
@@ -94,7 +99,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider3.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>4</h1>
@@ -105,7 +110,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider5.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>5</h1>
@@ -116,7 +121,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider1.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>6</h1>
@@ -127,7 +132,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider2.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>7</h1>
@@ -138,7 +143,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider3.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>8</h1>
@@ -149,7 +154,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider4.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>9</h1>
@@ -160,7 +165,7 @@ function showModal() {
             src="https://getuikit.com/docs/images/slider5.jpg"
             width="400"
             height="600"
-            alt=""
+            alt="placeholder"
           />
           <div class="uk-position-center uk-panel">
             <h1>10</h1>
