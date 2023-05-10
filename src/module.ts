@@ -55,9 +55,11 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
      */
 
     // add uikit plugin to nuxt
-    addPlugin({
-      src: resolver.resolve('./runtime/plugin.client'),
-      mode: 'client'
-    });
+    if (options.js) {
+      addPlugin({
+        src: resolver.resolve('./runtime/plugin.client'),
+        mode: 'client'
+      });
+    }
   }
 });
