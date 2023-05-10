@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNuxtApp } from '#imports';
+import { useNuxtApp /*onMounted*/ } from '#imports';
 const { $uikit } = useNuxtApp();
 
 const accordionItems = [
@@ -31,7 +31,12 @@ function showModal() {
     }
   );
 }
-// onMounted(() => console.log($uikit));
+// onMounted(() => {
+//   console.log(useNuxtApp());
+//   if (process.client) {
+//     console.log(UIkit.modal.confirm('Uiki'));
+//   }
+// });
 </script>
 
 <template>

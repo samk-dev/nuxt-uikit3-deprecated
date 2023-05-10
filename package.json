@@ -1,12 +1,12 @@
 {
   "name": "@samk_dev/nuxt-uikit3",
-  "version": "1.1.0-0",
-  "description": "Nuxt - Uikit 3 module",
-  "repository": "samk-dev/nuxt-uikit3",
-  "author": {
-    "name": "Sam K",
-    "url": "https://samk.dev"
-  },
+  "version": "1.0.0-beta-01",
+  "description": "Nuxt Uikit 3 module",
+  "workspaces": [
+    "docs",
+    "playground",
+    "example"
+  ],
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -21,6 +21,21 @@
   "files": [
     "dist"
   ],
+  "repository": "samk-dev/nuxt-uikit3",
+  "homepage": "https://github.com/samk-dev/nuxt-uikit3",
+  "author": {
+    "name": "Sam K",
+    "url": "https://samk.dev"
+  },
+  "bugs": "https://github.com/samk-dev/nuxt-uikit3/issues",
+  "keywords": [
+    "nuxt",
+    "nuxtjs",
+    "nuxt3",
+    "nuxt-module",
+    "uikit3",
+    "yootheme"
+  ],
   "scripts": {
     "prepack": "nuxt-module-build",
     "dev": "PORT=3666 nuxi dev playground",
@@ -29,9 +44,26 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx,vue,md,json}\"",
-    "test": "vitest run",
-    "test:watch": "vitest watch",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.4.3",
+    "uikit": "^3.16.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/schema": "^3.4.3",
+    "@types/node": "^20.1.1",
+    "@types/uikit": "^3.14.0",
+    "changelogen": "^0.5.3",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "nuxt": "^3.4.3",
+    "prettier": "^2.8.8"
   },
   "lint-staged": {
     "src/**/*.{.js,ts,vue,tsx}": [
@@ -53,27 +85,11 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-    "@nuxt/kit": "^3.4.3"
+  "engines": {
+    "node": ">=16.11.0"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
-    "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/module-builder": "^0.3.0",
-    "@nuxt/schema": "^3.4.3",
-    "@nuxt/test-utils": "^3.4.3",
-    "@types/node": "^18",
-    "@types/uikit": "^3.14.0",
-    "changelogen": "^0.5.3",
-    "eslint": "^8.39.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "nuxt": "^3.4.3",
-    "prettier": "^2.8.8",
-    "vitest": "^0.30.1"
-  },
-  "peerDependencies": {
-    "uikit": "^3.16.15"
+  "packageManager": "npm@9.6.6",
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,40 +1,36 @@
 # Nuxt Uikit 3
 
+⚠️ the package is still work in progress and will be released soon ⚠️
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
 Nuxt compatibility: `^3.0.0`
-UIkit 3 version `3.16.15`
+UIkit 3 version `3.16.16`
 
 nuxt-uikit3 Nuxt module.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-  <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-uikit3?file=playground%2Fapp.vue) -->
-  <!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
 - [UIkit 3 Docs](https://getuikit.com/docs/introduction)
 - [Nuxt Docs](https://nuxt.com/docs/getting-started/introduction)
+  <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-uikit3?file=playground%2Fapp.vue) -->
+  <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
 - Injects UIkit 3 into Nuxt ✅
-- Load UIkit 3 default css or disable it and load your own ✅
 - Use all UIKit 3 JS components without writing any JS ✅
 
-### On version `1.0.0` release **todos**
+### On version `1.0.0` release **todos:**
 
-- Enable/Disable Uikit 3 default icons
-- Import only specific JS components []
-- Enable/Disable Uikit 3 default icons []
+- scss/less to customize UIkit 3 theme
 - Tests jest?? or vitest??
 - Docs []
 - Examples []
 - Contribution guid []
 - Licence []
-- PR template []
-- Nuxt 2 support?? maybe!!
 
 ## Quick Setup
 
@@ -42,19 +38,13 @@ Add `@samk_dev/nuxt-uikit3` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @samk_dev/nuxt-uikit3 uikit
-# with typyscript support
-pnpm add -D @samk_dev/nuxt-uikit3 uikit @types/uikit
+pnpm add -D @samk_dev/nuxt-uikit3
 
 # Using yarn
-yarn add --dev @samk_dev/nuxt-uikit3 uikit
-# with typescript
-yarn add --dev @samk_dev/nuxt-uikit3 uikit @types/uikit
+yarn add --dev @samk_dev/nuxt-uikit3
 
 # Using npm
-npm install --save-dev @samk_dev/nuxt-uikit3 uikit
-# with typescript
-npm install --save-dev @samk_dev/nuxt-uikit3 uikit @types/uikit
+npm install --save-dev @samk_dev/nuxt-uikit3
 ```
 
 Add `@samk_dev/nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
@@ -86,7 +76,15 @@ export default defineNuxtConfig({
        * @default true
        */
       coreTheme: boolean
-    }
+    },
+    /**
+     * @default true
+     */
+    icons: boolean,
+    /**
+     * @default true
+     */
+    js: boolean
   }
 });
 ```
@@ -108,7 +106,7 @@ You can use any css class from UIkit 3 as you would normally do.
 
 ## Javascript
 
-You can use UIkit 3 JS components by adding the `data-uk-<component-name>` || by calling `$uikit` inside `<script></script>` tag
+You can use UIkit 3 JS components by adding the `data-uk-<component-name>`
 
 **To work with javascript components from UIkit 3, you have to add `data-uk-<component-name>`
 Please refer to UIkit 3 documentation as they mentioned there**
@@ -166,33 +164,6 @@ Using the `data-uk-<component-name>` method:
 </template>
 ```
 
-### Inside `<script></script>` tag
-
-```html
-<script setup lang="ts">
-  // import $uikit from useNuxtApp()
-  const { $uikit } = useNuxtApp();
-  // use any component $uikit.<component-name>
-  function showModal() {
-    $uikit.modal.confirm('UIkit confirm!').then(
-      function () {
-        console.log('Confirmed.');
-      },
-      function () {
-        console.log('Rejected.');
-      }
-    );
-  }
-</script>
-
-<template>
-  <div>
-    <!-- call showModal method on click -->
-    <button @click="showModal">show alert</button>
-  </div>
-</template>
-```
-
 ## Development
 
 ```bash
@@ -211,21 +182,17 @@ npm run dev:build
 # Run ESLint
 npm run lint
 
-# Run Vitest
-npm run test
-npm run test:watch
-
 # Release new version
 npm run release
 ```
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-uikit3/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/nuxt-uikit3
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-uikit3.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/nuxt-uikit3
-[license-src]: https://img.shields.io/npm/l/nuxt-uikit3.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/nuxt-uikit3
+[npm-version-src]: https://img.shields.io/npm/v/@samk_dev/nuxt-uikit3/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@samk_dev/nuxt-uikit3
+[npm-downloads-src]: https://img.shields.io/npm/dm/@samk_dev/nuxt-uikit3.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@samk_dev/nuxt-uikit3
+[license-src]: https://img.shields.io/npm/l/@samk_dev/nuxt-uikit3.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@samk_dev/nuxt-uikit3
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
