@@ -1,6 +1,6 @@
 {
   "name": "@samk_dev/nuxt-uikit3",
-  "version": "1.0.0-beta-01-test-2",
+  "version": "1.0.0-beta-02",
   "description": "Nuxt Uikit 3 module",
   "workspaces": [
     "docs",
