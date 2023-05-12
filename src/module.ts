@@ -41,7 +41,7 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
       nuxtOptions.css ||= [];
       nuxtOptions.css.push(`uikit/dist/css/uikit-core.css`);
     }
-
+    
     // add uikit plugin to nuxt
     if (options.js) {
       addPlugin({
@@ -49,7 +49,7 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
         mode: 'client'
       });
     }
-
+    
     // load uikit icons
     // if (options.icons) {
     //   nuxt.options.app.head.script ||= [];
