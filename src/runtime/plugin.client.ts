@@ -1,14 +1,15 @@
 import { defineNuxtPlugin } from '#app';
-import * as UIkit from 'uikit';
-// import icons from 'uikit/dist/js/uikit-icons';
-import { NUIkit } from './assets/js/nuxt-uikit';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-  // it's causing a bug in production
-  // uikit.mjs?v=41729758:3 Uncaught TypeError: UIkit.use is not a function
-  // nuxtApp.$uikit = UIkit;
-  // nuxtApp.$uikit?.use(icons);
+  const uikitOptions = nuxtApp.$config.app.uikit;
 
-  nuxtApp.provide('uikit', UIkit);
-  nuxtApp.provide('nuikit', NUIkit);
+  if (uikitOptions.js) {
+    const UIkit = await import('uikit').then((r) => r.default || r);
+
+    if (uikitOptions.icons) {
+      await import('uikit/dist/js/uikit-icons.js').then((r) => r.default || r);
+    }
+
+    nuxtApp.provide('uikit', UIkit);
+  }
 });
