@@ -41,26 +41,7 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
       nuxtOptions.css ||= [];
       nuxtOptions.css.push(`uikit/dist/css/uikit-core.css`);
     }
-    
-    // add uikit plugin to nuxt
-    if (options.js) {
-      addPlugin({
-        src: resolver.resolve('./runtime/plugin.client'),
-        mode: 'client'
-      });
-    }
-    
-    // load uikit icons
-    // if (options.icons) {
-    //   nuxt.options.app.head.script ||= [];
-    //   nuxt.options.app.head.script?.push({
-    //     src: `https://cdn.jsdelivr.net/npm/uikit@${dependencies.uikit}/dist/js/uikit-icons.min.js`,
-    //     defer: true,
-    //     type: 'text/javascript'
-    //   });
 
-    //   console.log(nuxt.options.app.head.script);
-    // }
     /**
      * TODO:
      *
@@ -76,5 +57,13 @@ export default defineNuxtModule<NuxtUIkitModuleOptions>({
      * }
      *
      */
+
+    // add uikit plugin to nuxt
+    if (options.js) {
+      addPlugin({
+        src: resolver.resolve('./runtime/plugin.client'),
+        mode: 'client'
+      });
+    }
   }
 });

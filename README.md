@@ -22,6 +22,7 @@ nuxt-uikit3 Nuxt module.
 
 - Injects UIkit 3 into Nuxt ✅
 - Use all UIKit 3 JS components without writing any JS ✅
+- Use UIKit 3 icons pack ✅
 
 ### On version `1.0.0` release **todos:**
 
@@ -37,14 +38,14 @@ nuxt-uikit3 Nuxt module.
 Add `@samk_dev/nuxt-uikit3` dependency to your project
 
 ```bash
+# Using npm
+npm install --save-dev @samk_dev/nuxt-uikit3
+
 # Using pnpm
 pnpm add -D @samk_dev/nuxt-uikit3
 
 # Using yarn
 yarn add --dev @samk_dev/nuxt-uikit3
-
-# Using npm
-npm install --save-dev @samk_dev/nuxt-uikit3
 ```
 
 Add `@samk_dev/nuxt-uikit3` to the `modules` section of `nuxt.config.ts`
@@ -102,6 +103,22 @@ You can use any css class from UIkit 3 as you would normally do.
     <button type="button" class="uk-button uk-button-primary">Click me!</button>
   </div>
 </section>
+```
+
+## Icons
+
+Enable `icons: true` in `nuxt.config.ts`
+
+```ts
+// nuxt.config.ts
+uikit3: {
+  // ...rest of options
+  icons: true;
+}
+```
+
+```html
+<span data-uk-icon="icon: check; ratio: 2"></span>
 ```
 
 ## Javascript
