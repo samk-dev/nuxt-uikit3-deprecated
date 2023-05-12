@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   uikit: {
     css: {
       coreCss: true,
-      coreTheme: false
+      coreTheme: true
     },
-    js: true
-    // icons: false
+    js: true,
+    icons: true
   }
 });

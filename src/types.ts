@@ -33,5 +33,5 @@ export type NUIkitCssOptions = {
 export interface NuxtUIkitModuleOptions {
   css: NUIkitCssOptions;
   js: boolean;
-  // icons: boolean;
+  icons: boolean;
 }

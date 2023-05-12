@@ -50,6 +50,9 @@ function showModal() {
       Show Modal
     </button>
 
+    <h2>Icon</h2>
+    <span uk-icon="icon: check; ratio: 2" />
+
     <h2 class="uk-text-bold">Accordion Component</h2>
     <base-accordion :items="accordionItems" />
   </div>
