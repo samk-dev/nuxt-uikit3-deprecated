@@ -10,6 +10,8 @@
 Nuxt compatibility: `^3.0.0`
 UIkit 3 version `3.16.16`
 
+![cover image](.github/assets//nuxt-uikit3.jpg)
+
 nuxt-uikit3 Nuxt module.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
