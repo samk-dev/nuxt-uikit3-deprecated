@@ -1,6 +1,6 @@
 {
   "name": "@samk_dev/nuxt-uikit3",
-  "version": "1.0.0-beta-02",
+  "version": "1.0.0-beta-04",
   "description": "Nuxt Uikit 3 module",
   "workspaces": [
     "docs",
@@ -47,6 +47,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@nuxt/devtools-kit": "^0.4.6",
     "@nuxt/kit": "^3.4.3",
     "uikit": "^3.16.17"
   },

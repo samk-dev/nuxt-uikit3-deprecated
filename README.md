@@ -23,6 +23,7 @@ nuxt-uikit3 Nuxt module.
 - Injects UIkit 3 into Nuxt ✅
 - Use all UIKit 3 JS components without writing any JS ✅
 - Use UIKit 3 icons pack ✅
+- UIkit 3 documentation in Nuxt Devtools ✅
 
 ### On version `1.0.0` release **todos:**
 
@@ -88,6 +89,19 @@ export default defineNuxtConfig({
     js: boolean
   }
 });
+```
+
+## Enable in Nuxt Devtools
+
+In order to view UIkit 3 in Nuxt Devtools you have to install `@nuxt/devtools` please see
+[Nuxt Devtools Documentation](https://devtools.nuxtjs.org) and follow the Getting started section.
+
+Once you have it installed in `nuxt.config.ts` and enable devtools. That's it ✨ now you have a tab with UIkit 3 docs
+
+```ts
+devtools: {
+    enabled: true
+  },
 ```
 
 ## CSS
