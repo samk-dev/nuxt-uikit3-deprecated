@@ -3,5 +3,8 @@
   "name": "nuxt-uikit3-playground",
   "scripts": {
     "dev:prepare": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "0.4.6"
   }
 }
