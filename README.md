@@ -6,11 +6,12 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
+[![UIkit][uikit-src]][uikit-href]
 
 Nuxt compatibility: `^3.0.0`
 UIkit 3 version `3.16.16`
 
-![cover image](.github/assets//nuxt-uikit3.jpg)
+![cover image](.github/assets/nuxt-uikit3.jpg)
 
 UIkit 3 Nuxt module
 
@@ -231,3 +232,5 @@ npm run release
 [license-href]: https://npmjs.com/package/@samk_dev/nuxt-uikit3
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
+[uikit-href]: https://getuikit.com
+[uikit-src]: .github/assets/uikit3-badge.svg
