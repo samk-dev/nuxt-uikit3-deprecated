@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="50px" height="23px" viewBox="0 0 50 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Artboard</title>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#212123" x="0" y="0" width="50" height="23"></rect>
-        <g id="Group" transform="translate(5.000000, 4.000000)">
-            <g id="uikit-logo" fill="#28A5F5" fill-rule="nonzero">
-                <polygon id="Path" points="9.33333333 1.28364389 6.72278134 0 4 1.42857143 6.64958829 2.66666667"></polygon>
-                <polygon id="Path" points="10.3190476 2.66666667 7.68571429 4.2651352 10.6666667 6.00239292 10.6666667 10.5585068 6.64761905 12.8365638 2.66666667 10.5632927 2.66666667 7.03134721 0 5.66738454 0 12.1330462 6.54761905 16 13.3333333 12.1330462 13.3333333 4.40871022"></polygon>
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#1F1F21" x="0" y="0" width="50" height="23" rx="3"></rect>
+            <g id="Group" transform="translate(5.000000, 4.000000)">
+                <g id="uikit-logo" fill="#28A5F5" fill-rule="nonzero">
+                    <polygon id="Path" points="9.33333333 1.28364389 6.72278134 0 4 1.42857143 6.64958829 2.66666667"></polygon>
+                    <polygon id="Path" points="10.3190476 2.66666667 7.68571429 4.2651352 10.6666667 6.00239292 10.6666667 10.5585068 6.64761905 12.8365638 2.66666667 10.5632927 2.66666667 7.03134721 0 5.66738454 0 12.1330462 6.54761905 16 13.3333333 12.1330462 13.3333333 4.40871022"></polygon>
+                </g>
+                <text id="UIkit" font-family="Helvetica" font-size="12" font-weight="normal" line-spacing="12" fill="#EFEFEF">
+                    <tspan x="16" y="15">UIkit</tspan>
+                </text>
             </g>
-            <text id="UIkit" font-family="Helvetica" font-size="12" font-weight="normal" line-spacing="12" fill="#EFEFEF">
-                <tspan x="16" y="15">UIkit</tspan>
-            </text>
         </g>
     </g>
 </svg>
