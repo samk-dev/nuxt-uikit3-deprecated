@@ -12,7 +12,9 @@ UIkit 3 version `3.16.16`
 
 ![cover image](.github/assets//nuxt-uikit3.jpg)
 
-nuxt-uikit3 Nuxt module.
+UIkit 3 Nuxt module
+
+UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 - [UIkit 3 Docs](https://getuikit.com/docs/introduction)
